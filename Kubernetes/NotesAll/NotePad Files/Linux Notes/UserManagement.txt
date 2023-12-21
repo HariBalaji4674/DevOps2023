@@ -1,0 +1,22 @@
+User Management:
+
+ls -l /home --> to check just root user and home user for files
+
+To check the how many user are available in the system
+
+cat /etc/passwd --> to see the users list
+cat /etc/passwd | wc -l --> to count the users list
+cat /etc/passwd | grep <username> --> to check the username available or not 
+
+By Default linux gives user id's from 1000
+By Default linux gives root user id is 0
+
+Creating user to home directory : sudo useradd -m <Username>
+
+Process Monitoring
+Performance Monitoring
+Networking Tools
+Text Manipulation
+Other Linux Commands
+
+

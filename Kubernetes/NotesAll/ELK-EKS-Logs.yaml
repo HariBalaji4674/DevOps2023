@@ -1,0 +1,15 @@
+ELK-EKS- Monitoring :
+What is EFK Stak:
+  The EFK stack is a collection of open-source tools that are commonly used for log management and analysis. 
+
+Elasticsearch: This is a distributed search and analytics engine that is used to store and index data.
+
+Fluentd: This is a data collector that is used to aggregate logs from various sources, such as applications, servers, and network devices. 
+
+Kibana: This is a web-based user interface that is used to visualize and analyze data stored in Elasticsearch.
+
+Together, the EFK stack provides a powerful and flexible solution for collecting, storing, and analyzing log data from multiple sources. 
+
+It is often used in modern cloud-based environments, such as Kubernetes, to provide centralized logging and monitoring capabilities for applications and services.
+
+Springboot application logs monitoring using EFK stack in Kubernetes cluster

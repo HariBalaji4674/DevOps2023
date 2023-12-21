@@ -1,0 +1,25 @@
+- name: Installing nginx with ansible 
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Nginx Module
+    yum:
+      name: nginx
+      state: installed
+  - name: nginx service started
+    service:
+      name: nginx
+      state: started
+
+- name: Installing http server
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: installing httpd server
+    yum:
+      name: httpd
+      state: installed
+  - name: starting the service
+    service:
+      name: httpd
+      state: started

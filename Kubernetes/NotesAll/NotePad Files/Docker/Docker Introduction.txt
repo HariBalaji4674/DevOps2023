@@ -1,0 +1,54 @@
+Containers:
+
+Containers allow you to package your application together with libraries and other dependencies, providing isolated environments for running your software services.
+
+Containers are very light weight in nature
+Containers have revolutionized the way software is developed, deployed, and managed. 
+
+They offer many benefits, such as portability, scalability, and resource efficiency. 
+
+However, they also have drawbacks, such as complexity, security risks, and storage and networking challenges
+
+Server --> request and it will give the responce
+
+Hypervisor:
+
+On top of physical server we use virtual machine l
+Virtualisation --> Another machine on top of one machine 
+
+Containerization:
+
+Docker
+Buildah
+
+Virtual Machine has a complete isotaion and full secure compared to docker containers
+
+Containers does not have full security problems
+
+Why Docker is so famous?
+
+Command
+Containers
+Docker File
+Docker Engine
+
+Stages in docker conatiners
+---------------------------
+
+Stage 1 --> Docker File --Run command docker build
+stage 2 --> Image Creation -- docker run 
+stage 3 --> containers -- Docker Images
+
+Docker engine --> with commands
+
+Docker is fully dependent on docker engines its like a heart of the docker systems
+
+Buildah Is fully based on the Commands
+
+
+Day 2 Docker Containerization:
+------------------------------
+Conatiners will take some 
+
+Day 3 : Docker Multistage Builds
+

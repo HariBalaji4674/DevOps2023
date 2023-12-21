@@ -1,0 +1,294 @@
+Topics Discussed:
+Docker Introduction: Session 51 
+
+What is Container:
+    Container is a executing environment with configurable isolation and resource limitations
+    Containers are light weight in nature
+    Resources Limitations : Namespaces,Resources Limitations, Mounts etc ..
+Why Containers are needed:
+    First Thing Run at Any environment
+    Encapsulate the Application code and its all dependencies
+    Self-describing and portable 
+    It can run withiut any extra dependencies 
+What is a Container Image:
+    Image: Contains Application Code , Dependencies, Os where the application should Run
+    It is a collection of read only layers.These layers are loosly coupled
+    
+Difference Between VMs and Containers :
+VM:
+    VM is Hardware Virtualization
+    VM should conatin full operating system with invidual machine
+    VM is high secure 
+    VM is Multiple Machines each with its own guest OS
+Containers:
+    Light weight in nature
+    Minimal OS is required
+    Portable 
+    Isolation of VMs
+    Multiple Instances of Single Application
+Describe a Process of Containerization of Application:
+    Write a Dockerfile
+    Build the image with that file 
+    Push the image to repository 
+    Run the image to create a container
+    
+docker run exec -it <container-name> bash
+Why Containers are Relatively Small:
+    Images dont contain kernel. They share and access the one used by the host on which they are running
+    
+
+Vitualization --> Logical isolation of one pysical systems into multiple systems
+
+Image is Static and immutable 
+Container is Dynamic it can be runnable and mutable 
+
+docker pull 
+docker create 
+docker start
+
+docker run = pull + Create + Start
+
+docker port forwarding
+
+Docker FROM
+Docker RUN :
+    Run instuction will run at the time of image creation 
+    It is used to install all packages required to build an image and run the conatiner 
+    
+Docker CMD :
+    the instruction is used to RUN the container with given Instructions
+    Can be over ridden
+    
+Docker EntryPoint:
+    This will fixed run time envrionment to the container 
+    cannot be overridden
+
+Labels Instruction: Session 52:
+
+    LABEL : Giving key value pairs to the docker file
+    lables are the key-value pairs that represents the tags for images not for the containers
+    images can be filtered based on the labels like 
+    docker build -t <image-name> .
+    docker images --filter labels=key=value
+    docker inspect <image-id> --> This can inspect all the details about the images
+
+Standard input : this is the file handle that your process reads to get information from you.
+
+Standard output :  your process writes conventional output to this file handle.
+
+Standard error : your process writes diagnostic output to this file handle.
+
+Expose Instruction :
+    we can instruct the container builder to set the port for the conatiner based on the expose instruction 
+    EXPOSE 80/tcp
+    expose will not adding any functionalities this is just instruction for conatiner builder
+
+ENV Instruction : Environment Variables
+    Configuration is supplied Through Environment Variables
+    we can add environment variables to the container 
+    it is as same as Labels but env will be used in container but lables will used for filtering
+
+Docker Copy:
+    Copy The content from local to Image/conatiner
+
+    COPY /source/file/path  /destination/path
+
+Docker ADD :
+    This command will copy the content from local to image/container
+    This also copy the content from internet 
+    This also copy the content by unzipping automatically 
+    ADD /source/file/path  /destination/path
+    ADD http://source.file/url  /destination/path
+
+Docker CMD:
+    CMD ["executable","param1","param2"]
+Docker save:
+    standard output 
+    Save one or more images to a tar archive (streamed to STDOUT by default)
+Docker Load:
+    Load an image from a tar archive
+    
+Docker Can be used in production
+
+Docker Stats: docker statistics used to To monitor cpu and memory the docker in production
+
+Docker Events: is used to monitor the eveents take palce in the docker daemon 
+
+Docker Compose: docker compose will always run in the dependency order
+dependency :
+    depends_on
+    links
+    volumes_from
+
+Docker Cycle Management:
+    stop 
+    pause
+    run
+    
+Docker Session : 53 
+
+Docker USER Instructions:
+    With user instruction we can give the minimal previlages to the root access
+    After Creating the user, every instruction after user will be done in that user only.
+    
+Docker WorkDirectory: 
+    Instead of cd command in normal linux we used workdir instruction to set the workdirectory where we should save the file 
+    By default after workdirectory instruction every thing will run on that workdir.
+
+Docker Arg Commands:
+    It will supply the variables at the build time but not supply at container run time 
+    to supply arguments at run time we need to use it like 
+    env var1=arg1
+    Arg can be used as a first instruction to supply the os version to from Instruction
+    docker build -t <nameof image> --build-arg version=9 .
+    
+ ARG Vs ENV:
+    Arg: will work in only build time of image
+    ENV: will work on both at build time as well as RUN time
+    
+    ARG name
+    ARG COURSE
+    
+    ENV variable1 = name
+    ENV variable2 = COURSE
+        
+Docker OnBuild :
+    On Build will work at container run time not at image build time
+    onbuild instruction will not execute at the time of image
+    Onbuild will execute at the time of container creation
+    We need to have file in our workspace while using the onbuild Instruction
+    
+    
+Docker Is Easy Portable 
+AMI --> Heavy Size, Full Operating System, Mutable, Immovable,
+docker-compose up -d 
+docker-compose down -d
+
+Volumes : Docker Volumes
+    Docker is Ephemeral In nature
+    Databases --> RDBMS,NoSQL,Redis,MQ,MySQL
+1) Docker Named Volumes
+2) Docker UnNamed Volumes
+
+Volumes: -v <host-path>:<container-path>
+Docker is storing temporary volumes in the directory -->/var/lib/docker/overlay2 --> temporary volumes
+
+UnNamed Volumes: (Bind Mounting/Bind Volume)
+    Create a Directory and map it with the docker containers to store data
+    We have to manage the directory
+    docker run -it -v <host_path>:<container_path> <image_name> /bin/bash
+
+Named Volumes:
+    Docker Should manage these volumes
+    Everything is managed by docker commands
+    docker run -it -v <volume_name>:/data <image_name> /bin/bash
+
+docker inspect <container-id> --.
+docker volume inspect <container-id>
+docker volumes ls --> list down all the vloumes
+
+StateFul Applications:
+    Mongodb
+    MySQL
+    Reddis
+    RabbitMQ
+docker run -p <host-port>:<container-port> -v <host volume path>:<conatiner-volume-path> --name <container name> 
+
+Docker Compose File:
+*****
+volumes:
+- source: rabbitmq
+  target: /var/lib/rabbitmq
+  type: volume
+*****
+
+
+Docker Best Practices:
+
+1) Creating Named Volumes is Best Practices
+2) Create Networking is best Practices
+3) Use Official Images
+4) Try To reduce the memory using multistage building etc..
+5) By Using Office Alpine images memory will be reduces to almost 100 perecnt
+6) MultiStage Builds Mention 
+7) Use Distroless Images
+8) Use Docker Security Scanning
+
+Docker Session - 56
+
+Docker Architecture:
+    Docker CLI --> Where we write Docker Commands
+    Docker Daemon --> Where all The containers are managed using daemon
+    Docker HUB --> Where Docker Images are build and pushed for public use
+
+Docker Layers:
+    Once we create the image we cannot change image
+    docker image is immutable and static in nature
+
+    Each Instruction in the Docker file is Called the Docker layer.
+
+    Each instruction will create one image and one mini container will create.
+
+    There is one component will be there to run and build everything that is docker engine
+
+    One layer will create one image and one container on top of each container the next instructions will be run when the instruction moves to next then previous mini container created by Docker Engine will be destroyed.
+
+
+Docker is Located in :
+    /var/lib/docker/ : All information rekated to docker will be stored here 
+    /opt/containerd/ : Is the place where container daemon is located
+    /lib/.systemd/docker.service : is the place docker service is located
+
+docker commit:
+    creates a new images to a running containers changes 
+    if you have changed something in the running container then docker commit will add new changes and creates new images out of it
+
+docker histroy <image-name> :
+    it will show the docker image histroy how many time the image got changed
+
+docker digest:
+    Digest is content addressable identifier where it can filter the images based on the content even if it has the same name and tags
+
+docker manifest inspect <image-name> :
+    client calls the image name 
+    it will go the client then checks in the local if exits it will pull else it will go to the registry from ther eit will pulled
+    each manifest parsed layers will get ids 
+    from that ids it will get pulled
+
+docker diff <containerid> :
+    it will list down all the files added or copied to the container filesystem
+registry configuartions:
+    /etc/conatiners/registries.conf
+
+Docker Disadvantages:
+    1) What will Happen if Docker Server is Down
+    2) What happens if you suddenly get more traffic
+    3) How to balance the load if you have multiple containers
+    4) Self Healing --> what happens when the correct resources arent reached
+    5) what about Secrets and Configs --> SSM Parameters are Stored
+
+Container Orchestration:
+    Orchestra Means --> Where one Person can manages the different persons to get the work done
+
+    One Person Giving the Instrctions to another persons 
+
+    When containers are running we need to manage those containers 
+    
+    Docker Run --> Creating Container Out Of Image
+    Image --> Physical File Static,Immutable, Builder File
+
+Kubernetes: For Better Networking,Storage Solutions and Security instead of Docker Swarm.
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+    

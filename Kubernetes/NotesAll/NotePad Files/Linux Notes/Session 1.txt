@@ -1,0 +1,88 @@
+Linux Operating System:
+===---=================
+What is Server?
+Server is a Electronic device/component where it gives responce based on the request we asked to that is called server
+
+Server Contains:
+----------------
+Operating Systems
+RAM Random Access Memory -->
+Memory Managements 
+Central Processing unit Processsors
+More Hard Disk
+File Systems
+
+How  to check Operating System in linux ?
+commands:
+
+To Check the operating system version?
+
+cat /etc/os-release
+lsb_release -a
+hostnamectl 
+
+Operating Systems:
+
+An operating system (OS) is the program that, after being initially loaded into the computer by a boot program, manages all of the other application programs in a computer.
+
+system hardware
+cpu
+ram
+i/o
+
+Operating systems will contact System Hardware to process anything on the screen
+
+Linux Opearting Systems: Features
+------------------------
+1) Multitasking
+2) Multitier capacity
+3) File System
+4) GUI(Graphical User Interface)
+5) Security
+6) High Performance
+7) Free OS
+8) More Stability
+9) Less Cost and more Optimisation
+
+Components in Linux
+-------------------
+
+Architecture of linux:
+----------------------
+
+Hardware -->  where operating systens lies 
+Kernel --> The heart of OS interacts with hardware based on the requests by user
+
+memory manages
+process management
+system management
+etc ..
+
+terminal --> where it provides the user interface to write the commands 
+
+Shell--> is the command line interpreter that process commands.the place where terminal commands will execute based on the utilities available in the file system
+ 
+Utilities--> the files by default located in teh systems
+
+Applications --> a computer software package that performs a specific function for an end user or another
+
+Linux Distributions:
+--------------------
+Ubuntu --> apt-get
+Centos --> yum install
+Fedora --> dnf
+RHEL --> yum install
+
+
+
+Commands used for environment varibles:
+
+set 
+
+command is used for change the environment variable
+
+echo command will print the content
+
+export
+
+command will be used to change the environment variable

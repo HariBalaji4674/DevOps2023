@@ -1,0 +1,3 @@
+SourceCode --> WebHook --> Maven --> SonarCube --> Tests --> New Image Pushed to DockerHub --> Image Updater --> Updates with new image --> Manifest Repo --> ArgoCD --> Kubernetes.
+
+

@@ -1,0 +1,70 @@
+Go lang :
+  2007
+  Robert Griesmer,Rob Pike,Ken Thompson
+  Compiled Fast So Very fast
+  It is Compiled Language
+  No Run Time Required
+Concurrency Out Of the BOX
+Designed for readability and usability
+Compiles for windows,macintosh,linux,Many OS
+
+Data Types:
+- int
+- string
+- bool
+- complex
+- float
+-
+Variables & Dot Notation:
+Variables: used to store the information or data
+- Keywords : var, :=
+- cont name str
+- var age int
+
+How to read the data from user:
+- reader = bufio.NewReader(os.stdin)
+Conditions:
+- if-else
+- if else-if else
+
+Functions:
+- Built-In functions
+- Custom Created Functions
+
+Arrays:
+- Arrays are the data structure to store multiple values with same kind and fixed value
+
+Slices:
+- slices are like arrays storing multiple values with same kind and flexibles values
+
+Loops:
+- Iterate through the work
+- Constant Loop
+- Only one Loop
+
+Types of Loops:
+syntax of For loop:
+for {
+
+}
+- Infinite Loop
+- for loop with index and range
+
+Packages in Go:
+- go programs can be organized into packages
+
+Scopes:
+- Variables in Go
+  - Global levels
+  - Local Variables
+  - Package Level Variables
+
+Maps:
+- Key Value Piars
+- all keys should have same data types and all values should have same data types
+
+Structs:
+- The Maps which is used to store different data types is called the Structs
+- struct
+
+

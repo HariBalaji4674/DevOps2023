@@ -1,0 +1,38 @@
+Assignments:  DevOps-Practice:qmdq fdlb wwmm qoxy
+------------
+hari.balaji4674@gmail.com:ixoq bidx ooce qfxu
+[smtp.gmail.com]:587 hari.balaji4674@gmail.com:ixoq bidx ooce qfxu
+
+Install Gmail in linux using shell scripting 
+prompt user for gmail username and password and complete installation
+
+
+
+
+Q)...Write a script that reads a text file and generates a list of words along with their frequencies. 
+	 Bonus points for sorting the list by frequency.
+ans:
+1) first Create a file with content 
+2) 
+
+
+
+
+#!/bin/bash
+
+touch "the data is stored in all the environments" file1.txt
+
+cat file1.txt
+
+cut -d " " -f file1.txt 
+
+
+
+
+Develop a script that takes a text file and replaces all occurrences of a specific word or phrase with another word or phrase.
+
+
+
+Write a script that checks whether a given word or phrase is a palindrome (reads the same forwards and backwards).
+
+Develop a script that reverses the order of characters in each line of a text file.

@@ -1,0 +1,47 @@
+Cloud Watch :
+  Fundamentals
+  Metrics
+  Alerts
+  Custom Metrics
+
+Demo:
+  Metrics (default)
+  Custom Metrics
+
+What is Cloud Watch:
+  Cloud : Resource Creator
+  Watch : Gate Keeper
+  Cloud watch is a person can see all details about cloud in cloud watch
+
+A Gate keeper for my aws account which can support below things
+  1: Monitoring (***)
+  2: Alerting
+  3: Reporting
+  4: Logging
+
+Monitoring: Monitor the resources
+
+Metrics: Get the real life metrics
+ a metrics is something that will help you to understand about utilization and usage of cpu.
+
+  How much cpu is used
+  How much memory is used
+  How many api calls is received
+
+Alerts:
+  Based on the metrics we get, some notifications so that we need to take actions to get the metrics outcome
+
+LogInsights:
+  Storing all the activities about resource utilization
+
+Custom Metrics:
+  CPU Utilization, Memory Utilization by default cloud watch should not support tehre we need to integrate with cloiud watch to monitor Memory also
+
+Cost Optimization:
+  Reducing the Cost on cloud services usage
+
+Scaling:
+  Increases The services based on the traffic/CPU Utilization.
+
+
+

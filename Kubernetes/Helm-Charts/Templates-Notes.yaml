@@ -1,0 +1,120 @@
+Templates Folder: Gives The Full Details about the all manifest files
+
+Set command is used to set the values for helm charts
+
+Template Deep Dive:
+  - Template Actions
+      -  - (Hyphen)
+      -  . (dot)
+      -  | (pipe)
+
+  - Conditions
+      - {{- if condition}} {{- end }}
+      - with
+      - if else end
+      - if else if else end
+  - Loops
+      - range function
+
+  - Variables
+      {{ $variale-name := .Values.my.flag }}
+
+Actions: Start with two flower brackets and ends with two flower brackets
+
+1: {{- "Helm Templating is "}} , {{- "cool"}}
+- (hyphen) : hyphen removes the trailing space wither front or back
+. (dot) : represents all the values
+pipe(Symbol) | : Allows to Chain the multiple functions and expressions lines
+There are Functions : with upper functions also
+{{ .Values.my.custom.data | default "testdefault" | upper | quote}}
+
+Functions:
+  - quote
+  - upper
+  - lower
+  - nindent 4 : Argument is 4 it gives four spaces before the each line
+
+Conditional Logic:
+  {{- if .Values.my.flag }}
+  {{ "Print The If statement values" }}
+  {{- else }}
+  {{ " Print The else Statement Values "}}
+  {{- end }}
+
+  {{- if .Values.my.flag }}
+  {{ "Print The If statement values" }}
+  {{- else if .Values.my.flag }}
+  {{ " Print The else if Statement Values "}}
+  {{- else }}
+  {{ "Print The Else Statement Values"}}
+  {{- end }}
+
+Variables :
+    {{ $variablename := .Values.my.values}}
+    {{- if $variablename == true}}
+
+Loops:
+   . (dot) in loops represents single value at a time
+  {{- range .Values.my.values}}
+    - {{. | upper | quote}}
+  {{- end}}
+
+Dictionaries:
+  key value pairs
+  {{- range $key $value .Values.var.name}}
+    - {{$key}} : {{$value}}
+  {{- end}}
+
+Debugging The templates:
+  dry-run commands
+
+Helpers.tpl file:
+  Hosts different templates
+
+helpers.tmpl:
+ defining the custom name
+ 
+  {{- define "firstchart.mytemplate" -}}
+  {{- .Values.myValue}}
+  {{- end}}
+
+ including the customname:
+ name: {{- include "firstchart.labels" . | nindent 4}}
+
+Schema Validation:
+
+Range Paremeters in Chart:
+  = >= =< and | ^ ~
+
+
+---------------------------------------------------
+Helm Hooks:
+  pre-install
+  post-install
+  pre-delete
+  post-delete
+  pre-upgrade
+  post-upgrade
+  pre-rollback
+  post-rollback
+
+Helm Security :
+
+Helm Starters:
+
+helps to application specified charts
+helm create --starter spring
+
+helm env HELM_DATA_HOME: How to know where we need to create the helm starter folder
+
+terraform
+aws cli
+aws configure
+git
+mobaxterm
+
+
+
+
+
+

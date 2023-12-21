@@ -1,0 +1,67 @@
+How to set a username and password to never expires.
+
+Why /etc/passwd and /ete/shadow file cannot be merged into 1 file.
+
+To list, all the files opened by particular PID.
+
+We are unable to unmount the file system. What are the reason behind it ?.
+What could be the reason it server take more time after reboot?.
+
+we are trying to create the file under any partition but we are getting permission denied alert. What could be the reason? However space issue and no permission issue?
+
+How to check kernel routing table Information?
+
+route. $ sudo route -n. Kernel IP routing table. Destination Gateway Genmask Flags Metric Ref Use Iface. ...
+netstat. $ netstat -rn. Kernel IP routing table. ...
+ip. $ ip route list. 192.168.0.0/24 dev eth0 proto kernel scope link src 192.168.0.103.
+
+
+How to set sticky bit and what is the difference b/w smalls and capital S
+
+How to set sticky bit and what is the difference b/w small s and capital S
+
+Which file is used to specify default gateway?
+
+In RHEL 7,how to switch between two runlevels?
+
+What is NFS ? How to configure it? What port no it does use ?
+
+What is nice value and how to set nice value for particular process?
+
+What is the difference b/w FTP and TFTP?
+
+How to extend the file system in Linux ?
+
+How will you rollback the packages after patching?
+
+What is rsync and what is the syntax for rsync??
+
+How to reduce the file system in linux ? FS reduction can be happened online or
+
+How to set the numbering of lines for file by using vi editor?
+
+How to SCAN the disk in linux?
+
+etc/fstab file is having how many feilds and describe the meaning of each field?
+
+What is the difference b/w SOFT link and HARD link? How to create it?
+
+
+Can we create the SOFT link accross the partition? (yes/No) Please describe your answer?
+
+What is the location of HFS shared info?
+
+How to check it any particular port is listening or not?
+
+What is concept behind journalling? What is the pros and cons ?
+
+While doing patching suppose one package is not allowing you to do patch. Which command would you execute and how will you troubleshoot?
+
+Process Monitoring
+Performance Monitoring
+Networking Tools
+Text Manipulation
+Other Linux Commands
+
+
+

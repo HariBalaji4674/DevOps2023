@@ -1,0 +1,40 @@
+♨️Learn Programming Language for Automation
+
+Programming languages for automation you can go for include Java, JavaScript, Python, C# (pronounced C Sharp), Rust, Go, and Ruby.
+
+♨️Learn Different Operating System Concepts
+
+Basic concepts of OS, you also need to understand operating systems like Linux (eg. SUSE Linux, Ubuntu/Debian, or RHEL/Derivatives), Unix (eg. OpenBSD, NetBSD, FreeBSD), and Windows.
+
+♨️ Understand How to Manage Servers
+
+Servers can be a piece of computer software or hardware that offers functionality for programs, called clients. A server is designed to process requests and return requested data to the user’s computer over a network.
+
+♨️ Learn to Work in the Terminal
+
+DevOps engineer, you will have to learn about bash scripting, PowerShell/Emacs/Vim/Nano, Compiling apps from source, terminal multiplexers (screen or tmux), process monitoring, system performance, text manipulation tools, and network tools.
+
+♨️ Understand Networking Security Protocols
+
+Network security protocols are HTTP, HTTPS, FTP/SFTP, SSL/TLS, SSH, Port Forwarding, SMTP, IMAPS, POP3S, Domain Keys, SPF, and DMARC.
+
+♨️Learn How To Setup Proxy, Load Balancer, Firewall, and Server
+
+A DevOps Engineer needs to know the way to set up proxies like Reverse Proxy or Forward Proxy, caching servers, load balancers, firewalls, and web servers like Tomcat, IIS, Apache, and Nginx.
+
+♨️ Understand Infrastructure as Code
+
+Infrastructure as Code are Containers like Docker or Nomad, Secret Management through Sealed Secrets, Vault, SOPS, or Cloud Specific Tools, Container Orchestration through Docker Swarm, Kubernetes, or Nomad, Configuration Management through Ansible, Puppet, or Chef, and Infrastructure Provisioning through AWS CDK, Terraform, CloudFormation, or Pulumi.
+
+♨️Learn About CI/CD Tools
+
+Learning the basic concepts of CI/CD as well as their tools like Gitlab CI, Jenkins, Azure DevOps Services, Drone, and Travis CI will help you make the process of integration, delivery, and deployment easier.
+
+♨️Learn to Monitor Infrastructure and Software
+
+You can do infrastructure monitoring using tools such as Nagios, Grafana, Zabbix, Monit, DataDog, and Prometheus.
+
+
+♨️Learn About Different Cloud Providers
+
+Some of the popular cloud providers are Amazon Web Services (AWS), Google Cloud, Microsoft Azure, Heroku, Alibaba Cloud, Digital Ocean, Vultr, etc.

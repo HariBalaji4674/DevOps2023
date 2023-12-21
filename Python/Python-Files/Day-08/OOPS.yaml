@@ -1,0 +1,125 @@
+Object Oriented Programming Language: OOPS
+ Python is Structure and Object Oriented
+
+OOPs Concepts:
+  Class 
+  Objects
+  Inheritance
+  Polymorphism
+  Overloading
+
+Class:  A Class is a collection of variable and methods 
+  A group of objects represented in a single entity is called Class
+  a "blueprint" for creating objects.
+  Collections of Variables(attributes)  and Methods(Behavoir)
+  Logical Entity
+  Does Not occupy space in the memory 
+Objets:
+  It occupies space in the memory 
+  An instance of the class
+  It is a Physical Entity
+for one class we can create multiple ojects but ojects are independent of each other 
+
+Methods: (Functions)
+
+Ouside Class: we call it as Function
+  def <function-name> ()
+        name = "peddireddy"
+        print(name)
+
+Method : A function creating inside a class is called Methods
+
+class 
+
+There are : 2 : # Type of Methods can declare inside the class
+
+1: Static Method (We can call directly call using the class)
+  To make the method static we need to mention  : @staticMethod  
+2: Instance Method (we can call the function through object)
+
+Types of Variables: 
+  1: Class Variables
+  2: Global Variables
+  3: Local Variables
+
+# Variables : Local,Class,Global
+To Access Class variables we need to use self.variablename
+
+self.<variablename> : --> Class variables to access inside class
+
+Method   VS   Constructor :
+
+Method we can give any name 
+Method will return values
+Method can take the arguments and parameters
+Methods can be invoking using objects
+
+Constructor name should be def __init__(self)
+Constructor will never return the Value
+Constructor can also take arguments and Parameters
+Contructor will be called at the time of object Creation
+
+Constructor: As same a class to used for classes
+
+__init__(self): This is a Contructor 
+
+Inheritance: 
+  Taking the Features and Funtionalities from the parent class.
+
+  Inheritance Concept:
+    Acquiring all the attributes (Variables) and Behaviour(Methods) from one class to another class is called inheritance
+  
+Class A : a,b,c m1(),m2() Base Class,Parent Class, Derived Class
+Class B(A) : x, y, z m3() Sub Class, Derived Class
+
+Objectives of Inheritance:
+  1: Code Re-Usability
+  2: Avoid Duplication
+  3: Multi-Level Inheritance 
+  4: Multiple Inheritance ( Multiple Parents)
+  5: Heirarchy Inheritance
+Type of Inheritance:
+  1: Single Inheritance
+  2: Multiple Inheritance
+  3: Multi-Level Inheritance
+  4: Heirarchy Inheritance
+
+Over Loading: (Polymorphism)
+  On method can be defined in many froms.
+  One method can be callled many times 
+  Same Method name but different Parameters
+
+Modules :
+  A Collections of Functions, Classes (Variables + Methods)
+Packages :
+  A Collections of Modules is called Packages
+
+How To create a Module
+How to call the functions from one module to another module
+Same Functions in multiple Modules
+
+Exception Handing : Program Errors : Syntax Error:
+  An Event which will cause a Program Termination
+  While Executing the program it will show some error
+
+try ,except,else, finally
+try: it will try to execute the code
+except: if try block got error then this except code will work
+else: if Except block doesn't execute then it will get executed
+finally: will execute every time 
+
+
+File Handling:
+  Working with text
+  Writing data into text files
+  
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+AWS Public Cloud Services:
+
+What is cloud computing ?
+
+Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS).
+
+
+AWS EC2--> Elastic Cloud Compute
+
+Cloud Compute resources
+
+Elastic --> Which means scaled up or scaled down 
+
+Increase the resource and decrease resource
+
+Asked to Provide : Ram,CPU,Disk
+
+Virtual Server-->Server which is used Virtually.
+
+Why should you use an EC2 Instance?
+
+As as devops engineer :Physical Server
+
+Timely Update
+Security Issues
+Server Checking 
+
+As A Devops Engineer: Public Cloud 
+Do Automationfor below:
+
+Timely Update
+Security Issues
+Server Checking
+
+Advantages: Pay-As-You-Go
+-------------------------
+Management Issues
+Cost Issues
+Maintainence Issues
+Resouce Isssues
+
+5 Different EC2 Instances:
+-----------------
+
+general purpose:webservers,Code Repositories
+
+These instances are used for gerneral pur[ose for webservers and code repositories where it will be used balance of compute,memory and networking resources and it can be used for variety of divewrse workloads
+ 
+compute optimised
+
+memory 
+
+storage optimissed
+
+Accelerated 
+
+AWS Data Centers has regions across the world
+
+AWS Regions:Across the globe
+Availability Zones:Downtime,Disaster recovery
+
+
+VPC Cloud -->
+--------------
+What is VPC?
+Why VPC is Required?
+What Components are there in VPC?
+	VPC 
+	Internet Gateway
+	Public Subnets
+	Load Balancers (Elastic LoadBalancers)
+	Routers(Route Tables)
+	NAT Gateway
+	Security Groups ( Automaion of SG - NACL)
+	Whats is NACL?
+	Severs (Web,Backend,DB-Servers)
+	VPC Flow Logs
+	Subnetting 
+	Subnet Masking
+
+Route 53 -- DOMAIN NAME AS A SERVICE IN AWS
+
+
+
+
+
+
+
+
+
+
+
+

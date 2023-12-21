@@ -1,0 +1,191 @@
+ArgoCD Course:
+- Containers and Kubernetes
+- Source Code Managed
+
+What is GitOps:
+- Infrastructure as Code,Cofiguration as Code
+- Automationg all work with Continious Integration and Continious Delivery
+
+Why GitOps:
+- Versioned EveryThing
+- Collobaration by Code Reviews
+- Continous Integration
+- Continious Delivery
+- Improved Security (Permission)
+- Rollbacks
+
+Key Features Of ArgoCD:
+- Declarative and Versioned
+- Multi-Cluster Support
+- Automated Sync and RollOuts
+- Pluaggable Deployement Stratagies
+- Extensibility
+- Security
+
+Advantages of ArgoCD:
+- Streamlined DEployments
+- Enhanched Collaboration
+- Improved Security
+- Faster Incident Responce
+- Scalability
+
+ArgoCD Best Practices:
+- Git as single source of truth for Configuration and deployement
+- Use Version Control System
+- Use Kubernetes Namespaces to organize and manage the services and deployments
+- Uses RBAC to Control Access to the Resources in the cluster
+- Use Helm Charts Or Kustomze to manage the Deployment of Complex Applications
+
+Branching Stratagies:
+- Trunk Based Development
+  - All Development Is done on one branch short lived feature branches are there to develop and merged within a time after developmenet of code
+
+- Git Flow
+  - Separate For Main Branch and Feature Branches
+  - feature branched are merged into one main branch
+
+- GitHub Flow
+  - All work happend on one branch and feature branched are used for pull Request
+
+GitOps Model:
+- Pull Model :
+  - Controller Pull the Configuration from Git to the argo server
+  - pulls the code and pushes to infra
+- Push Model :
+  - Push Model Pushes the received code to the Deploy the infrastructure
+  - CD System is Developed
+  - Push The Code to infra
+
+What is ArgoCD:
+- ArgoCD is a GitOps Continious Delivery Tool
+
+CI Tool: Modern Approach
+- Checkout The Code
+- Build The Code
+- Unit Test
+- Build Docker Image
+- Publish into Registry
+- Update k8s Image Tag in Repository
+- ArgoCD will Sync with Git Repo and If there are any changed it will auto deploy the application.
+
+Why GitOps-ArgoCD:
+- State Visibility
+  -- Last Sync Status
+  -- Health Status
+  -- Current Status
+  -- Real Time Updates
+- Git is the Source of Truth
+- Devs and DevOps will Just Commit The Code in Git Only
+- Keep Your Cluster in Sync with Git
+- Easy RollBack
+- More Security
+- Disaster Recovery Solution
+
+Core Concepts:
+
+Application:
+- Source: Git Code and Dependencies
+- Destination: where to deploy in which k8s cluster
+
+Application Supported Tools:
+- Helm Charts
+- Kustomize
+- Directory of Yaml Files
+- Jsonnet
+
+Project:
+- Logical Grouping of Applications
+- Useful when argoCD is used by multiple teams
+- Allows only Specified Tool
+
+Desired State and Actual State:
+- Desired State: What state You expect
+- Actual State : what state it has now
+
+Sync:
+- Process of making Desired = Actual State
+
+ArgoCD Components:
+
+ArgoCD API Server : ( API + Web Server) used for WEB UI/CLI/Rest
+- Used RBAC From Kuberenetes for authorizationa and Authentication
+Repo Server :
+- Interacts with Git to get the Latest Updates
+Application Controller :
+- Get Manifests from the Reposervers and Comapre the desired state and actual state
+- watch and Deploy the applications based on the state
+- for every 3 minutes the argocd will check the status of both k8s and git
+DEX : Identify service to interate with other external identity providers like OIDC,SSO,
+- OIDC One Identity Device
+- Singel Sign On
+Redis : Used For Caching
+Application set Controller:
+- It automates the geneartion of ArgoCD Applications
+
+ArgoCD Application: Deploying the application in Cluster using ArgoCD
+
+  Deployment in k8s Cluster - 3 Ways
+  - Using Declarative Yaml Files
+''''''''''''''
+ArgoCd Deployement Manifest File:
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: argocd
+spec:
+  destination:
+    namespace: guestbook
+    server: "k8scluster"
+project: default
+source:
+  path: guestbook
+  repoURL: "Url repo"
+  targetRevision: HEAD
+''''''''''''''''
+  - using  CLI
+  - Using WebUI/API
+
+Installing Helm Charts application using ArgoCD:
+-
+Managing Secrets in GitOps: HashiCorp Vaults
+- Secrets Management
+- Importance of Management
+
+ArgoCD-Deployment Stratagies:
+Ingress Contollers:
+- Nginx
+- HAProxy
+- Traefik
+- Linkerd
+- GKE
+
+1: Blue-Green
+2: Canary
+3: A/B
+4: Ramped
+5: Recreate
+
+Canary Deployment: Split the traffic
+
+- Version A is Serving
+- Deploy Second Version
+- Create a New Canary Ingress With traffic splitting enabled
+- Wait enough tume to confirm that version b is stable and not thorwing unexpected errors
+- delete the canary ingress a
+- point the main application ingress to send traffic to version B
+- ShutDown version A
+
+Rollout Model:
+- Replace each pod with new Version of Pod when we deploy the application
+
+Blue-Green Deployment:
+- Two different clusters in two different regions
+- if we deploy an application one in one side and application two will be deployed in another location
+- If we deploy an application one in one region the second region is getting ready to deploy the version 2 of the service
+
+
+
+
+
+

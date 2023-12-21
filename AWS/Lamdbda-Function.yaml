@@ -1,0 +1,35 @@
+Lambda Function: 
+Solving the below problems
+  Compute 
+  ServerLess
+
+Lambda Function : will also give compute 
+It is server less and can execute the application
+it will run automatically with out making the compute services visible to the user
+
+Cost Optimization/Estimation :
+  ServerLess --> Cost Optimization
+  Security --> Very Important in public cloud
+  Compliance --> how secure the appilication .
+  
+Cloud Cost Optimization:
+    If You are not managing the cloud cost doing efficiently
+
+Lambda Function --> EBS Volume SnapShots --> 
+
+Write a lambda Function (Python Code)
+This will talk to the AWS API
+Fetch all the EBS Snapshots
+Filterout SnapShots
+
+What is SnapShots:
+  EBS Snapshots are a point-in-time copy of your data, and can be used to enable disaster recovery, migrate data across regions and accounts, and improve backup compliance. You can create and manage your EBS Snapshots through the AWS Management Console, AWS Command Line Interface (CLI), or the AWS SDKs.
+
+# Docker
+# Kubernetes
+# Terraform 
+# Monitoring
+# AWS
+# Ansible
+# CI/CD
+

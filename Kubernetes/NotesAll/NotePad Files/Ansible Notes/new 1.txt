@@ -1,0 +1,23 @@
+cart.haridevopspractice.online
+catalogue.haridevopspractice.online
+dispatch.haridevopspractice.online
+mongodb.haridevopspractice.online
+mysql.haridevopspractice.online
+payment.haridevopspractice.online
+rabbitmq.haridevopspractice.online
+redis.haridevopspractice.online
+shipping.haridevopspractice.online
+user.haridevopspractice.online
+web.haridevopspractice.online
+
+ ansible-playbook -i inventory -e ansible_user=centos -e ansible_password=DevOps321 
+ user.yaml
+ redis.yaml
+
+Today:
+
+What is Cidr?
+what are protocols and uses ? Like ssh,tcp,smtp etc...
+
+
+mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web

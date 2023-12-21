@@ -1,0 +1,53 @@
+Shell Scripting Notes
+*********************
+
+Conditionals In Shell Scripting:
+--------------------------------
+if, if-else,nested if else
+
+if Conditions
+------------------
+if [ Condition ]
+then 
+	statement1
+	statement2
+	statement3
+fi
+
+if Else Condition
+-----------------
+if [ Condition == true ]
+then
+	statement1
+	statement2
+	statement3
+else
+	statement1
+	statement2
+	statement3
+fi
+
+Nested-If-Else
+--------------
+if [ Condition == true ]
+then
+	if [ Condition == true ]
+	then
+		statement1
+		statement2
+		statement3
+	else
+		statement1
+		statement2
+		statement3
+	fi
+else
+	statement1
+	statement2
+	statement3
+fi
+
+
+
+
+

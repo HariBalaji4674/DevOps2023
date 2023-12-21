@@ -1,0 +1,35 @@
+Collections in Python:
+  Python supports 4 Types of collections:
+
+List
+Tuple
+Set
+Dictionary
+
+List: 
+  Can store Multiple Values
+  List is collection which is ordered and Changeable
+  In Python lists are written with square brackets[]
+  List is mutable --> We can make changes
+  we can insert,add,delete,etc... several operations we can do
+  mention in Square Brackets[],
+Tuple: 
+  Can store Multiple Values
+  Tuple is collection which is ordered and UnChangeable
+  In Python lists are written with Open brackets
+  Tuple is immutable --> We cannot make changes
+  Mention in curly brackets
+Set:
+  Can store Multiple Values
+  Tuple is collection which is unordered and Unindexed
+  In Python lists are written with Curly brackets { }
+  Tuple is mutable --> We can make changes
+  Mention in curly brackets
+Dictionary:
+  Unordered,Indexed,Mutable
+  it is like key value pair
+  mention in flower brackets { }
+  
+Python File Opera
+
+

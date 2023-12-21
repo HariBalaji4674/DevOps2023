@@ -1,0 +1,12 @@
+- name: Checking the play level Varaibels
+  hosts: local
+  become: yes
+  vars:
+    Name: "Peddireddy"
+    course: "DevOps"
+    year: "2023"
+  tasks:
+  - name: Checking the Playlevel vars
+    debug:
+      msg: "My Name is {{Name}},I am Learning 
+    {{course}},Started Year is {{year}}"

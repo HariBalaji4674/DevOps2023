@@ -1,0 +1,44 @@
+pipeline {
+    agent {node {label 'agent1' }}
+    options {
+        ansiColor('xterm')
+    }
+    stages{
+        stage('Init'){
+            steps{
+                sh ''' 
+                cd Session-27
+                cd Modules
+                cd module-user
+                ls -ltr
+                pwd
+                terraform init '''
+            }
+
+        }
+        stage ('paln'){
+            steps {
+                sh '''
+                cd Session-27
+                cd Modules
+                cd module-user
+                ls -ltr
+                pwd
+                terraform plan'''
+            }
+        }
+        stage('Approve') {
+            steps {
+                input "Please Approve the Request?"
+            }
+        }
+    }
+    post {
+        always {
+            echo "execute all the time this senstences"
+        }
+        failure {
+            echo "the execution got failed due to some issues"
+        }
+    }
+}

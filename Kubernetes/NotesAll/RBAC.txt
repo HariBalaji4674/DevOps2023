@@ -1,0 +1,43 @@
+RBAC
+HorizantalPodAutoScalar
+IngressController
+
+Helm Chart is Kubernets Package Manager
+
+Role Based Access Controller (RBAC)
+Authentication and Authorization
+
+Role
+Role Binding
+Cluster Role
+Cluster Role Binding
+
+Resources or Objects in Kubernetes are Either Cluster level and Namespace level
+
+Roboshop:
+Project Started
+Team Leader Managers,DevOps Engineers
+
+
+As EKS Admin:
+IAM ---> Authentication
+EKS --> Authorization needed
+RBAC --> Will Provide EKS Authorization
+    1: Create Namespace
+    2: Create User and Assign some IAM Role
+    3: Role ,Give Policy/Permissions should have access to describe the EKS
+Role and Role Binding:
+    Role --> Permissions
+
+Config Map in AWS-AUTH in kube-system
+here we need to map iam user and k8-RBAC
+
+kubectl get configmap aws-auth -n kube-system -o yaml
+
+aws eks iam Permissions
+
+map roles are already available
+create users
+mapUsers:
+    
+

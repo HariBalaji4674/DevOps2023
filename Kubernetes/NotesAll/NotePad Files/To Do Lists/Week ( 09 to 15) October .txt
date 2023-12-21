@@ -1,0 +1,46 @@
+Date:09-October-2023
+--------------------
+1) Terraform Basics Video ---> Yes
+2) Anible Session 21 Video Full ---> Yes
+3) Linux Basics all Session - 1,2 Full ---> No 
+4) Networking Videos 1 to 7 ---> NO 
+5) What is all about Cloud Comuting and IaaS, PaaS and SaaS ? ---> NO
+6) What is AWS Security Group (Day 5) and Route 53 and Interview Quetsions Till ?  --->No 
+
+Date:10-October-2023
+---------------------
+
+1) Terraform Session-25 --> Yes
+2) Ansible Session 22 --> Yes
+3) Jenkins Session 40 --> Yes
+4) Manual Project Set Up Upto Cataogue --> Yes
+5) Linux Commands --> No 
+
+
+Date:11-October-2023
+---------------------
+
+1) Terraform Basics Revision and Session 25 
+2) Ansible Session 17 (10:00Am)
+3) Shell Scripting Building RoboShop Project ( 3 days From Tmrw)
+4) Jenkins Udemy Course --> 1 Hour 
+5) Networking Concepts
+6) Linux Interview Questions
+
+
+Date:13-October-2023
+---------------------
+1) Terraform Modules,tfvars
+2) Topics Should be covered
+	CIDR
+	VPC
+	Subnets
+	Internet Gateway
+	Route tables
+	Security Groups
+	EC2 instance
+	Private vs Public subnet
+	High Availability in AWS
+3) Ansible Introduction
+4) Docker Multistage Building and kuberentes inroduction
+5) Shell Scripting Basics

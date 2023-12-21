@@ -1,0 +1,44 @@
+Yaml Concepts:
+--------------
+Task:List me one person full details
+
+---
+  - name: Install and Run Nginx
+    hosts: all
+    become: yes
+    tasks:
+    - name: Install nginx
+      ansible.builtin.ping:
+      state: installed
+    - name: start nginx
+      ansible.builtin.service:
+      name: nginx
+      state: started
+      
+#Task: Remove the Service Nginx from thes servers
+---
+  - name: Remove Nginx
+    hosts: all
+    become: yes
+    tasks:
+    - name: Removing Nginx service
+      ansible.builtin.yum:
+        name: nginx
+        state: removed
+    - name: Checking the status of nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        
+#Task 3: Print Message in the terminal
+
+- name: Print Varibles in the terminal
+  hosts: all
+  vars:
+    course: DevOps
+    Trainer: Hari Vardhan
+    date: 10-20-25
+  tasks:
+  - name: Printing The messages in the terminal
+    ansible.builtin.debug:
+      msg: " I am Learning {{course}} under the trainer {{Trainer}} from date {{date}}" 

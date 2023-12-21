@@ -1,0 +1,96 @@
+Validations In Shell Script:
+---------------------------
+
+$? --> exit status get output based on previous command output
+$?=0 --> The status would be 0 then The previous command is success
+$?=1 --> The status would be 1-127 then the previous command is failure
+
+Colors : colors are in the range of 30 -- 37  format ==> "\e[30m"
+
+
+************************
+reset = 0, reset="\e[0m"
+black = 30, ==>"\e[30m"
+red = 31, ===>"\e[31m"
+green = 32, ===>"\e[32m"
+yellow = 33, ===>"\e[33m"
+blue = 34, ===>"\e[34m"
+magenta = 35,===>"\e[35m"
+cyan = 36,===>"\e[36m"
+white = 37.===>"\e[37m"
+
+
+
+yum install mysql -y
+
+if [ $? -eq 0 ]
+then 
+	echo "The Installation of Sql is Success"
+else
+	echo "The Installation of Sql Is falied"
+fi
+
+yum install postfix -y
+
+if [ $? -eq 0 ]
+then 
+	echo "The Installation of Sql is Success"
+else
+	echo "The Installation of Sql Is falied"
+fi
+
+
+
+
+
+
+
+
+
+yum install mysql -y --> gives output 0 then below condition if-else statement will execute 
+							and 
+						gives output as "hello world"
+						
+
+
+
+
+
+
+
+
+
+if [ $? -eq 0 ]
+then
+	echo "hello World"
+fi
+
+
+Primary goal is to download the MySql Server
+--------------------------------------------
+
+sudo yum install mysql-server 
+
+1) get the user id to check whether user is on root or normal 
+2)
+
+
+
+user=$(id -u)
+
+if [ $user -eq 0 ] 
+then 
+	sudo su -
+	if [ $user -eq 0 ]
+	then 
+		yum uninstall mysql-server -y
+	else
+		
+else
+	echo "ERROR :Switch to Root User"
+fi
+
+
+
+
+

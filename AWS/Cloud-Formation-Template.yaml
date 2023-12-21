@@ -1,0 +1,29 @@
+Cloud Formation Template:
+  Used to define the Infrastructure
+  IaC --> Infra as a Code
+  AWS CLI & AWS CFT
+  Fetaure and Components
+  Tips and Tricks
+
+CFT: Cloud Formation Template
+Principles in IaC:
+  Any Tool should act as a Middle Man for creating a infrastructure
+  user --> MiddleMan --> Cloud (AWS,Azure,GCP)
+CFT Would be Versioned,Declarative in nature
+
+
+CFT : 
+Drift Detection : Detection of Drift (some unwanted rules for  user)
+Stacks: 
+
+Format of CFT:
+  Version:
+  Description:
+  Metadata:
+  Parameters:
+  Rules:
+  Mapping:
+  Conditions:
+  Resources:
+
+

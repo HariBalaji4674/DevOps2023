@@ -1,0 +1,14 @@
+Virtual private cloud Your VPCs New
+
+Subnets
+Route tables
+Internet gateways
+Egress-only internet gateways
+Carrier gateways
+DHCP option sets
+Elastic IPs
+Managed prefix lists
+Endpoints
+Endpoint services
+NAT gateways
+Peering connections

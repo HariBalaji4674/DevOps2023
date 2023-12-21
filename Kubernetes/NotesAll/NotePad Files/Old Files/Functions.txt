@@ -1,0 +1,55 @@
+Functions in Shell Scripting:
+-----------------------------
+
+function()
+{
+statements 1,
+2,
+3,
+.....
+}
+
+
+we can do repeated steps in one function and can be re used several times.
+
+yum install mysql -y
+
+if [ $? -eq 0 ]
+then 
+	echo "The Installation of Sql is Success"
+else
+	echo "The Installation of Sql Is falied"
+fi
+
+yum install postfix -y
+
+if [ $? -eq 0 ]
+then 
+	echo "The Installation of Sql is Success"
+else
+	echo "The Installation of Sql Is falied"
+fi
+**********************************************
+
+
+can be replaced with below code by creating the function:
+
+validation()
+{
+        if [ $1 -eq 0 ]
+        then
+                echo "$2 Is Success"
+        else
+                echo "$2 Is falied"
+        fi
+}
+
+yum install mysql -y
+
+validation $? "The Sql Installation "
+
+yum install postfix -y
+
+validation $? "The Postfix Installation"
+
+

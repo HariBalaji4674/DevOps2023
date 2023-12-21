@@ -1,0 +1,19 @@
+Funtions:
+a set of statements which will perform a task
+1: Functions declaration/creation
+2: Calling the function/invoking function
+
+
+Function name and Function call:
+ 1. Function does not take arguments not returns any value
+ 2.
+Function(arguments)     Returns    output
+ yes                     no          None
+ yes                    yes         returns value
+ no                     no          no value
+ no                       yes       return value
+
+
+There are two type of arguments and parameters are passedto the function:
+1. Positional arguments
+2. Keyword Arguments

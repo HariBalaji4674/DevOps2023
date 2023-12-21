@@ -1,0 +1,9 @@
+# Helm Charts
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  myvalue: "Hello World"
+
+A template directive is enclosed in {{ and }} blocks.
