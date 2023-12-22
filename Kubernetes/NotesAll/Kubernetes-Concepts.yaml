@@ -494,7 +494,6 @@ rabbitMq --> 5672
 3. Create Service
 4. Create ConfigMap
 
-
 Helm Charts:
     In Containerization we are doing 2 things
     1. Building image and pushing it to DockerHub
@@ -507,7 +506,7 @@ Purpose of Helm :
 Parameterize Manifest Files:
     Helm Charts:
         apiVerison: Required
-        name: requiered --> Name of the chart
+        name: required --> Name of the chart
         version: chart version --> Give the name of the chart version
         description: a meaningful sentence
         appVersion: this is application version
@@ -516,6 +515,23 @@ Parameterize Manifest Files:
 
 Nothing will be easy Just Need to Try Hard With all Respect
 
+Custom Resource Definitions:
+- CRD Custom Resource Definition
+- CR Custom Resource
+- Custom Control
+
+Security Related Tool:
+- Kuberno
+- kubeproxy
+
+CRD: Defining a new type of API To Kubernetes
+- Deployment
+- Extend the capabilities of Kubernetes
+- Extend the API Resources
+- Yaml File where what can we define
+- Gives all the possible options to support a user can Submit in the
+- Virtual Service
+- 
 
 
 
