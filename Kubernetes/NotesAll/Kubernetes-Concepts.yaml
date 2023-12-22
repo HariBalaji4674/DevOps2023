@@ -531,7 +531,7 @@ CRD: Defining a new type of API To Kubernetes
 - Yaml File where what can we define
 - Gives all the possible options to support a user can Submit in the
 - Virtual Service
-- 
+- Manifests/Helm/Operators/Kutomize.
 
 
 
