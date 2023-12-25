@@ -2,7 +2,7 @@ Shared Libraries: is also called Functions
 Create Library and use whenever it is needed
   Each Microservice has Individual Pipeline
 What is a Shared Libraries:
-  Making The repitative Code as a Library in Git Repository
+  Making The repetitive Code as a Library in Git Repository
   mavenBuild()
   @Library('Shared-Library')
   Amount of Code which has to be write will decrease drastically

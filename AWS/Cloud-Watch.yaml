@@ -22,7 +22,7 @@ A Gate keeper for my aws account which can support below things
 Monitoring: Monitor the resources
 
 Metrics: Get the real life metrics
- a metrics is something that will help you to understand about utilization and usage of cpu.
+a metrics is something that will help you to understand about utilization and usage of cpu.
 
   How much cpu is used
   How much memory is used
@@ -35,7 +35,7 @@ LogInsights:
   Storing all the activities about resource utilization
 
 Custom Metrics:
-  CPU Utilization, Memory Utilization by default cloud watch should not support tehre we need to integrate with cloiud watch to monitor Memory also
+  CPU Utilization, Memory Utilization by default cloud watch should not support tehre we need to integrate with cloud watch to monitor Memory also
 
 Cost Optimization:
   Reducing the Cost on cloud services usage

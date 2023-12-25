@@ -2,7 +2,7 @@ Cloud Formation Template:
   Used to define the Infrastructure
   IaC --> Infra as a Code
   AWS CLI & AWS CFT
-  Fetaure and Components
+  Feature and Components
   Tips and Tricks
 
 CFT: Cloud Formation Template
@@ -11,10 +11,9 @@ Principles in IaC:
   user --> MiddleMan --> Cloud (AWS,Azure,GCP)
 CFT Would be Versioned,Declarative in nature
 
-
-CFT : 
+CFT :
 Drift Detection : Detection of Drift (some unwanted rules for  user)
-Stacks: 
+Stacks:
 
 Format of CFT:
   Version:
@@ -26,4 +25,17 @@ Format of CFT:
   Conditions:
   Resources:
 
+
+Cloud watch and Cloud Trail:
+- Monitoring service for application health
+- collect monitor,alert analyze etc
+
+Cloud Trail:
+- 
+
+while [ $i -lt 10]
+do
+  echo $i
+  i=`expr $i+1`
+done
 

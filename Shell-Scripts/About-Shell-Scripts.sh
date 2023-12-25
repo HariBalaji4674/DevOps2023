@@ -6,7 +6,7 @@ Why Shell Scripts?
     Automating the Software Installations
     Automating the Security and software patches
     Automating the Updates
-    Monitoring the systen alarms
+    Monitoring the system alarms
     Raise Notifications Based on the requirements
     troubleshoot and audit logs
     Cronjobs for repatative tasks montly,hourly etc..

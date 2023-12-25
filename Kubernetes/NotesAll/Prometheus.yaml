@@ -263,7 +263,7 @@ Counter_Type_Metrics:
 
 Prometheus :
 
-Alerting Overview 
+Alerting Overview
 
 - Alerting is separted into two parts
 - Prometheus-Servers to AlertManager
@@ -311,22 +311,26 @@ Prometheus-Architecture:
 
 - Prometheus Server: Collects all inofrmations
   - TSDB : Where it connects with origin host os HardDisk/SSD To store the metrics in Time-Series DataBase
-  - Retrieval : Pull Metrics from Jobs/Instnaces/Exporters 
+  - Retrieval : Pull Metrics from Jobs/Instnaces/Exporters
   - Alert Manager: Where it can push the notifications to many services to slack/pagerduty/teams/mails etc ..
-  - PromQL Quiries: A Queires where we run and get the UP 
-  - HTTP Server: Where we can Acces the web ui for prometheues from browser
+  - PromQL Quiries: A Queires where we run and get the UP
+  - HTTP Server: Where we can Acces the web ui for Prometheus from browser
   - PushGateway : For supporting short lived Jobs
   - Service Discovery : Where it will be cresting the Nodes from where the Prometheus Can fetch the metrics based on utilizations
 
 
 Servers/Services in Prometheus:
--  Prometheus Server
+- Prometheus Server
 - HTTP Server
 - Alert Manager
 - Node-Exporter
 - PushGateway
 - State Metrics Server
 - Grafana Server
+
+How do we manage and monitor spring boot application in production using prometheus:
+
+
 
 
 
