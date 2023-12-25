@@ -9,21 +9,29 @@ There are two types of communication
 
 How Containers will communicate with Host Systems:
 - Docker will create one network called Virtual etho 0 that is docker0 ---> that will connect with the Host eth0 and makes the communication this is called bridge networking
-
+- Virtual ethernet == Docker0
+-
 There are three Types of Networking in Docker Containers:
 - Bridge Networking
 - Host Networking
 - OverLay Networking (Docker Swarm)
 
+Host(eth0) --> Docker0 --> veth0 --> Docker(eth0)
+
+Host Networking:
+- Connecting all containers with host ip/eth0 networking.
+- Securing Is more important in docker but host networking will not provide high security
+
 Custom Bridge networking:
 - Create Custom Virtual ETH0 To connect with host eth0 to implement complete isolation between two containers located in same docker engine and host
+
 Network Commands:
-    Can do CRUD Operations:
-    docker network create secure-network
-    docker network ls
-    docker network inspect
-    docker network bridge
-    docker run -d --name finance --network=secure-network nginx:latest
+Can do CRUD Operations:
+docker network create secure-network
+docker network ls
+docker network inspect
+docker network bridge
+docker run -d --name finance --network=secure-network nginx:latest
 Why you need networking on Docker :
 - Docker networking enables a user to link a Docker container to as many networks as he/she requires.
 - Docker Networks are used to provide complete isolation for Docker containers.
