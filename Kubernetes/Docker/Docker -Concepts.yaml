@@ -2,37 +2,58 @@ Topics Discussed:
 Docker Introduction: Session 51
 
 What is Container:
-    Container is a executing environment with configurable isolation and resource limitations
-    Containers are light weight in nature
-    Resources Limitations : Namespaces,Resources Limitations, Mounts etc ..
+- A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing
+- It is a Run Time Environment for the application irrespective of OS
+- Portable and Self-Describing.
+- Container is a executing environment with configurable isolation and resource limitations
+- Containers are light weight in nature
+
+Resources Limitations : Namespaces,Resources Limitations, Mounts etc ..
 Why Containers are needed:
-    First Thing Run at Any environment
-    Encapsulate the Application code and its all dependencies
-    Self-describing and portable
-    It can run withiut any extra dependencies
+First Thing Run at Any environment
+Encapsulate the Application code and its all dependencies
+Self-describing and portable
+It can run without any extra dependencies
 What is a Container Image:
-    Image: Contains Application Code , Dependencies, Os where the application should Run
-    It is a collection of read only layers.These layers are loosly coupled
+Image: Contains Application Code , Dependencies, Os where the application should Run
+It is a collection of read only layers.These layers are loosly coupled
 
 Difference Between VMs and Containers :
 VM:
-    VM is Hardware Virtualization
-    VM should conatin full operating system with invidual machine
-    VM is high secure
-    VM is Multiple Machines each with its own guest OS
+VM is Hardware Virtualization
+VM should conatin full operating system with invidual machine
+VM is high secure
+VM is Multiple Machines each with its own guest OS
 Containers:
-    Light weight in nature
-    Minimal OS is required
-    Portable
-    Isolation of VMs
-    Multiple Instances of Single Application
+Light weight in nature
+Minimal OS is required
+Portable
+Isolation of VMs
+Multiple Instances of Single Application
+
 Describe a Process of Containerization of Application:
-    Write a Dockerfile
-    Build the image with that file
-    Push the image to repository
-    Run the image to create a container
+Write a Dockerfile
+Build the image with that file
+Push the image to repository
+Run the image to create a container
 
 docker run exec -it <container-name> bash
+
+Where pulled Image are stored:
+- /var/lib/docker/
+Docker Image SHA:
+- Full SHA256 code where we can get the image using HashCode
+- it is also called Docker Dangling Image
+- docker history <image-name>.
+
+Architecture of Docker Images:
+- docker manifest inspect <image-name>
+
+Tagging an image:
+- docker tag
+How to check the instructions that were used to build image:
+- docker image history <image-name>
+
 Why Containers are Relatively Small:
 - Images dont contain kernel. They share and access the one used by the host on which they are running
 
@@ -161,6 +182,9 @@ AMI --> Heavy Size, Full Operating System, Mutable, Immovable,
 docker-compose up -d
 docker-compose down -d
 
+
+-------------------------------------------------------
+
 Docker Session : 55
 
 Data will be removed once the container is removed hence we need to store data somewhere there docker volumes will come into existance
@@ -175,16 +199,28 @@ Docker has two types of Volumes:
 
 Volumes: -v <host-path>:<container-path>
 Docker is storing temporary volumes in the directory -->/var/lib/docker/overlay2 --> temporary volumes
+- CPU
+- Memory
+- Storage
+- RAM
+
+1: Bind Mounts:
+2: Volumes:
 
 UnNamed Volumes: (Bind Mounting/Bind Volume)
-    Create a Directory and map it with the docker containers to store data
-    We have to manage the directory
-    docker run -d -v <host_path>:<container_path> <image_name> /bin/bash
+Create a Directory and map it with the docker containers to store data
+We have to manage the directory
+docker run -d -v <host_path>:<container_path> <image_name> /bin/bash
 
 Named Volumes:
-    Docker Should manage these volumes
-    Everything is managed by docker commands
-    docker run -d -v <volume_name>:/data <image_name> /bin/bash
+- Using Docker CLI we can Manage the volume and attach to Containers
+- Mount Th volume to containers
+- Docker Containers in same commands
+- Volume mounts and Docker -v will do same
+
+Docker Should manage these volumes
+Everything is managed by docker commands
+docker run -d -v <volume_name>:/data <image_name> /bin/bash
 
 docker inspect <container-id> --.
 docker volume inspect <container-id>

@@ -3,7 +3,7 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import json
-
+import numpy
 url = "https://abcdhari.atlassian.net/rest/api/3/issue"
 # "https://your-domain.atlassian.net/rest/api/3/issue"
 API_TOKEN = "ATATT3xFfGF0ALWU6BYiyB0m5aq7oFKVvF3iEq9nqGQzEWVUcYYZchhkNHo6_iTW1cWm4_z3Zp1xmKryRQSlXSXR8SnoRwa_6xzqbp-TDw2z8V677xsczkxXDSKMvAHKHKa31MJAh-vrPIl4evlPEQv-sKMM4s_KSzMCTd6-tNjbF5tKRI0m-qA=55871D7B"

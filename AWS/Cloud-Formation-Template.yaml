@@ -1,41 +1,50 @@
 Cloud Formation Template:
-  Used to define the Infrastructure
-  IaC --> Infra as a Code
-  AWS CLI & AWS CFT
-  Feature and Components
-  Tips and Tricks
+Used to define the Infrastructure
+IaC --> Infra as a Code
+AWS CLI & AWS CFT
+Feature and Components
+Tips and Tricks
 
 CFT: Cloud Formation Template
 Principles in IaC:
-  Any Tool should act as a Middle Man for creating a infrastructure
-  user --> MiddleMan --> Cloud (AWS,Azure,GCP)
-CFT Would be Versioned,Declarative in nature
+Infrastructure as a code
+Versioning The code
+Write code To create Infrastructure
+Any Tool should act as a Middle Man for creating a infrastructure
+User --> MiddleMan --> Cloud (AWS,Azure,GCP)
+CFT Would be Versioned,
+Declarative in nature --> What you see is What you have
 
-CFT :
-Drift Detection : Detection of Drift (some unwanted rules for  user)
-Stacks:
+CFT : It will ask The user To give the
+Drift Detection : Detection of Drift
+- Some Unknown User has changed the resource Configuration
 
-Format of CFT:
-  Version:
-  Description:
-  Metadata:
-  Parameters:
-  Rules:
-  Mapping:
-  Conditions:
-  Resources:
+When Should you use CFT Over CLI:
+- When we need to get list of some resources we go with cli
+- when we need to create list of resources we use CFT
+
+Features of CFT:
+- It uses Yaml Formatting
+- Yaml is basically depends on Indentation
+- Yaml is easy to read and write
+- Json is Difficult to read and write Fully on Brackets
+
+Main Features of CFT:
+- Drift Detection : Modifications done to infra by other person and it will get detected is called Drift Detection
+- Creating Infra
+- Versioning
+- Store Templates in S3 Bucket
+- Create a Stack and Import all local Infra Yaml Files and Run it will create the Infra
+
+Main Components to Create the infra:
+- Version
+- Description
+- Metadata
+- Parameters
+- Rules
+- Mappings
+- Conditions
+- Resources**
 
 
-Cloud watch and Cloud Trail:
-- Monitoring service for application health
-- collect monitor,alert analyze etc
-
-Cloud Trail:
-- 
-
-while [ $i -lt 10]
-do
-  echo $i
-  i=`expr $i+1`
-done
 

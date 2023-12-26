@@ -1,3 +1,6 @@
+
+
+
 Networking --> Communication between two hosts/devices over wired /wireless
 Docker:
 - Docker is Platform where it implements the Containerization
@@ -9,8 +12,8 @@ There are two types of communication
 
 How Containers will communicate with Host Systems:
 - Docker will create one network called Virtual etho 0 that is docker0 ---> that will connect with the Host eth0 and makes the communication this is called bridge networking
-- Virtual ethernet == Docker0
--
+- Virtual ethernet == Docker0.
+
 There are three Types of Networking in Docker Containers:
 - Bridge Networking
 - Host Networking
@@ -24,6 +27,8 @@ Host Networking:
 
 Custom Bridge networking:
 - Create Custom Virtual ETH0 To connect with host eth0 to implement complete isolation between two containers located in same docker engine and host
+
+- Virtual Bridge == Bridge Networking
 
 Network Commands:
 Can do CRUD Operations:
