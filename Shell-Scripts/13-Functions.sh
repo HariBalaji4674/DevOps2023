@@ -1,18 +1,20 @@
 #!/bin/bash
 
-# Validations in shell Scripts 
+# Validations in shell Scripts
 # Functions in shell scripts
 
 #   $? == 0 --> Success
 #   $? == 1 - 127 --> Failure/Error
 
 validation(){
+
     if [ $1 -eq 0 ]
     then
         echo "$2 is Failure"
     else
         echo "$2 is Sucess"
     fi
+
 }
 
 sudo amazon-linux-extras list | grep nginx
@@ -33,9 +35,9 @@ validation $? "Cleaning the metadata "
 sudo yum -y install nginx
 
 validation $? "Installing nginx "
-    
+
 nginx -v
 
-validation $? "Version has shown" 
+validation $? "Version has shown"
 
 #nginx version: nginx/1.16.1

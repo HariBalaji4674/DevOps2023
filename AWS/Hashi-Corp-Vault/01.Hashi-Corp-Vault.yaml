@@ -1,0 +1,208 @@
+Hashi-Corp-Vault:
+- Installation
+- Start and Stop
+- Read Write and Delete
+
+What is Secret Engine:
+
+Secrets engines are Vault components which store, generate or encrypt secrets.
+1: Key-Value Pairs
+2: AWS Access Keys and Secrets
+
+Staring and Stopping Hashi-Corp:
+There are two type of Servers in Hashi-Corp Development mode and Production mode
+Production Mode: vault server -prod
+Development Mode: vault server -dev
+There are four important points :
+  1: Port
+  2: Storage
+  3: Unseal Key
+  4: Root Token
+Staring The vault Server:
+
+Step 1 : CLI Command for starting the server
+- vault server -dev
+
+Step 2 : Set VAULT_ADDR by exporting to environment variable - export VAULT_ADDR='http://127.0.0.1:8200'
+
+Step 3 : Set Root Token by exporting to environment variable - export VAULT_TOKEN="hvs.6j4cuewowBGit65rheNoceI7"
+
+Step 4 : Verify the status of vault server by running the command - $ vault status
+
+Step 5: Stopping The Server
+- vault server stop -dev
+
+Vault server configuration:
+1: Port By default is # 8200
+2: Storage used By Vault is #inmem(Inmemory)
+3: More imp keys is : unseal key and Root Token
+
+Vault address is : localhost:8200
+
+To Export two Important keys to environment variables is :
+$ export VAULT_ADDR="...."
+$ export VAULT_TOKEN="...."
+$ vault status : to check the status of Vault server is connected with Development Server
+
+Vault Operations Using Command Line Interface:
+
+When ever we specify new custom path we need to enable that path
+
+Enable Path to the Hashi Corp vault secret Engine:
+vault secrets enable -path=my kv
+
+Write Secrets in Hashi-Corp Vault:
+vault kv put <path> key=value
+kv : represents key and value pair
+put : represents write
+path: where secrets-used to store
+
+Read Secret from Hashi-Corp Vault:
+vault kv get my/path
+
+Get Secret in Json Format:
+vault  kv get -format=json my/app
+
+Get Secret in Yaml Format:
+vault kv get -format=yaml my/app
+
+List all Paths and Secrets in Vault server:
+vault secrets list
+
+Deleting the Secret from The Vault the server:
+vault kv delete <my/app-path>
+
+Secret Engine:
+AWS,KV,DataBases
+
+List all Secrets Engine Paths :
+vault secrets list
+
+Create a secret & Enable path for aws:
+vault secrets enable -path=aws aws
+
+Disable the path of aws:
+vault secrets disable <secret-engine-path>
+
+###
+
+Commands Related to Vault:
+vault kv -help
+vault kv <subcommand> [options] [args]
+Dynamic Secrets:
+
+We need Access Keys and Secret Key
+
+Step 1: vault secrets enable -path=aws aws
+
+Step 2: Writing Access Keys and Secrets in Hashi-Corp Vault
+
+  vault write aws/config/root \
+          access_key=aws access key \
+          Secret_key=aws secret key \
+          region=us-east-1 \
+          output=json
+
+Step 3: Set Up Role In AWS
+
+vault write aws/role/my-ec2-role \
+credentials_type=iam_user
+policy_document=-<<EOF
+    {
+      "Version": "2023-12-23"
+      "Statement": [
+        {
+          "Sid": "Stmt12344567",
+          "Effect": "Allow",
+          "Action":["ec2:*"],
+          "Resources": ["*"],
+        }
+      ]
+    }
+    EOF
+
+Step 4: Setting up the vault Secret
+
+vault read aws/creds/my-ec2-role
+
+Step 5: Revoke The Access Key and Secret Keys
+vault lease revoke <Lease Id>
+
+#####
+
+Vault Authentication:
+1: Policy Format
+2: Write Policy
+3: Test Policy
+4: Auth Method
+
+Creating Policy Document:
+
+- Using Hashi-Corp Language
+- Json Like Format Mentioned in Brackets
+- Create Path using :  vault write <path> kv
+- Enable Path Permissions
+
+Steps:
+1: Write a Policy Document
+2: Grant Permissions to Path using Policy Documents
+3: vault policy list --> List all policies.
+4: Create a path
+5: Enable path To Write the secrets
+
+Writing Policy Document: using file
+vault policy create my-policy Policy-Document.hcl
+# Grant Permissions: Policy-Document.hcl File Format
+
+  path "secret/data/*" {
+    capabilities = ["create","update"]
+  }
+
+  path "secret/data/<folder>" {
+    capabilities = ["read"]
+  }
+
+Using CLI To wite a policy Document:
+
+vault policy write my-policy - <<EOF
+
+path "secrets/data/*" {
+  capabilities = ["cretae","update"]
+}
+path "secrets/data/<folder-path>" {
+  capabilities = ["read"]
+}
+EOF
+
+vault policy read <policy-name> :
+To read the Policy Details
+
+vault policy delete <policy-name> :
+to delete the policy created
+
+Attach Token To Policy:
+export VAULT_TOKEN = "$(vault token create -field token -policy=my-policy)"
+
+vault kv put -mount=secret creds password="my-long-password"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

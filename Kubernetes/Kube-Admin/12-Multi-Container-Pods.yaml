@@ -1,0 +1,81 @@
+Json Path: Query Language for parsing the data
+
+Getting the dictionary details:
+
+Root Element: # Will be denoted with $
+
+- " $.vehicles.car.color "
+
+# Getting details of List: Root Element
+
+get first element : [0]
+get first element in inner list : $[0].[0]
+
+- $.car.wheels[1].model
+
+# Conditions in Json Path:
+- List number of element greater than 14
+- Condition is represented with ==> " ? "
+- All Elements represent with ==? @
+- $[? (@ >  14)]
+- $[? (@ == 25)]
+- $[? (@ != 30)]
+- $[? (@ >= 40)]
+- $[? (@ <= 50)]
+- [? ( @ >= 20)]
+
+Json Wild Cards: * Represents "ANY"
+- * Represents == Any Dictionary eg:... $.*.dict
+- [*] Represents == Any Value inside the List
+- $.*.[*] Represents == Any Values Inside both list and dictionary
+
+Json Path Lists:
+- Get the list of Elements in list from start and end point
+- $[0,3] ==> Give List until 2nd element
+- $[0:8] ==> Will Give List until 7th item in list
+- $[-1:0]  ==> Gives the last item in the list
+
+
+
+
+
+
+Json Path:
+
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}

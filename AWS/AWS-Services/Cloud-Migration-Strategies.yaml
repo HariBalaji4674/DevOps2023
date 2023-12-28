@@ -19,7 +19,7 @@ Cloud Migration Stratagies: Need To follow some process
     if application is monolithic we need to convert this to the microservices
     if not converted it is not suaitable for migrating beacuse every applicationin cloud should work on containers
 2. Planning:
-    Rehost : Lift & Shift 
+    Rehost : Lift & Shift
     Replatform: Convert Virtualization to Containers
     Repurchase:
     ReArchitecture:
@@ -29,10 +29,9 @@ Cloud Migration Stratagies: Need To follow some process
 3. Migration:
     migrate onpremises to cloud or public cloud
 4. Monitor :
-    monitor all the components for a while after migrating to the cloud 
+    monitor all the components for a while after migrating to the cloud
 5. Optimize :
     to improve with in less budject we need to do all the steps
-
 
 Preparation and Planning is one time activity
 Migration will goes to multiple phases

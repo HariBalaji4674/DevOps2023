@@ -1,9 +1,9 @@
 What is DevOps?
-    DevOps is the combination of cultural Philosophies,Practices and Tools 
+    DevOps is the combination of cultural Philosophies,Practices and Tools
     That increases the ability to deliver the application and its servces at hight velocity with evolve and improving products at faster pace then the normal software development process and infrastructure management process.
     This Speed Enables Organisations to better serve their customers and Compete with peers in the market
 What are the benefits of DevOps? What can it help us to achieve?
-    Collaboration 
+    Collaboration
     Speed
     Security
     Continious Delivery
@@ -27,9 +27,9 @@ What are the ways to distribute the software and advantages vs disadvantages?
     Image Building
 
 What is Caching? Types of Caching? What are its uses ?
-    Caching is storing the minimum data required to enter the appications which aused has accessed very frequently 
+    Caching is storing the minimum data required to enter the appications which aused has accessed very frequently
     which are highly expensive to eneter everytime and io intensive the data could not change very often (Very Frequently)
-    There are several layers in Caching CPU Caching,Browser Caching,Ddistributed systems Caching, etc.. 
+    There are several layers in Caching CPU Caching,Browser Caching,Ddistributed systems Caching, etc..
     Common Ones are Memory Caching and Distributed Caching
 
 what is Open Source?
@@ -46,8 +46,8 @@ Why isn't 100% availability a target? Why do most companies or teams set it to b
 Describe the workflow of setting up some type of web server (Apache, IIS, Tomcat, ...)?
 
 What is Choas Engineering?
-    The Engineering team who are doing experiments on the production Systems and services to build confidence on the Productions systems that ability of the software capability. 
+    The Engineering team who are doing experiments on the production Systems and services to build confidence on the Productions systems that ability of the software capability.
     build confidence in the system's capability to withstand turbulent and unexpected conditions"
-    
+
 What is "infrastructure as code"? What implementation of IAC are you familiar with?
 

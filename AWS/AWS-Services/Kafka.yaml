@@ -1,11 +1,11 @@
-Kafka : 
+Kafka :
 What is Kafka :
-   Open Source , Digital Streaming Platform that allows for the development of real time event driven applications 
+   Open Source , Digital Streaming Platform that allows for the development of real time event driven applications
 
 Produce & Consume Streams of Data
-Fast 
+Fast
 High accuracy
-Inorder
+In-order
 Resilient & Fault Tolerant
 
 Advantages:
@@ -19,4 +19,4 @@ How Apache Kafka Works:
    1: Producer API
    2: Consumer API
    3: Streams API
-   4: Connecters API
+   4: Connectors API

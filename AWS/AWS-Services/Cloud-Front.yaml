@@ -9,7 +9,11 @@ CDN : Content Delivery Network
 Latency
 Efficiency
 Loading Time 
-CDN : It will solve the problem like continious content delivery 
+CDN : It will solve the problem like continious content .DS_Store
+.idea/*
+.gradle/*
+out/
+build/delivery 
 
 The content will be stored in multiple locations in Central and Edge Locations also.
 
