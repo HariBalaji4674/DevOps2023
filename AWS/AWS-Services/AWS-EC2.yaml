@@ -1,5 +1,5 @@
 # AWS-EC2 Instances:
-1) EC2--> Elastic Cloud Compute 
+1) EC2--> Elastic Cloud Compute
     Elastic --> Can be extensible
     Cloud --> Services Provide over the internet
     Compute --> Compute Serives ie.. CPU,RAM,DISK,Memory .
@@ -7,17 +7,17 @@
     a) Timely Upgrade
     b) Security Issues
     c) Server Updates
-    d) Get Rid Of Maintainence
+    d) Get Rid Of Maintenance
     e) Management Effort
     f) Cost efficiency
 3) What is Cloud ?
     Using the Compute Resource AS Pay AS You GO
 4) Types of EC2 Instances?
     5 Different EC2 Instances
-        a) Compute Optimized 
+        a) Compute Optimized
         b) Memory Optimized
         c) Storage Optimized
         d) Accelerated Optimized
         e) General Compute Instances
-5) All About EC2 Instances: 
+5) All About EC2 Instances:
     https://github.com/iam-veeramalla/aws-devops-zero-to-hero/tree/main/day-3

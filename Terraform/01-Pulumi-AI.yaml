@@ -1,0 +1,30 @@
+Infrastructure as a Code With Pulumi AI Tool
+
+Pulumi Architecture :
+
+1: Language Host --> New Resources
+2: CLI & Engine --> Create Update Delete
+3: Providers --> AWS, Azure, Kubernetes
+4: State Backend --> Deployed Backend State
+5: Pulumi Service -->
+6: Cloud Storage --> S3 Bucket
+
+Pulumi Project
+  PProgram
+    Resources
+  Stacks
+    Stack(QA)
+    Stack(Dev)
+    Stack(Prod)
+
+62000 - 29000 = 33000
+33000 - 6500 = 26500
+26500 - 5000 = 21500
+21500 - 10000 = 11500
+11500 - 7000 = 4500
+4500
+
+
+
+
+

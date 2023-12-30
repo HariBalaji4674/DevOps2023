@@ -1,0 +1,22 @@
+1: First Introduce Yourself
+2: About CI-CD Pipeline
+3: About Fargate and ECS and EC2 Instance
+4: About Cost Optimization in EKS and ECS
+5: About VPC,Public Subnets,Private Subnets,VPC Peering
+6: How to Connect With Private Subnet ?
+7: Bastion Host Vs Other Server to Connect Private Instances
+8: How To get Logs From server?
+9: When to use a Lambda function, and when not?
+- https://jeromevdl.medium.com/when-to-use-a-lambda-function-and-when-not-9a225e6dd2dd
+
+10: How will you watch the logs from crashed Machines
+11: What is High Availability ?
+12: About Security Best Practices atleast 5
+13: About Security Products
+14: What sort of information will get from sonar qube ?
+
+Scaling Options :
+- Horizontal AutoScaling
+- Vertical Autoscaling
+
+
