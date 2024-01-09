@@ -1,0 +1,27 @@
+What is OpenShift:
+1: Availability
+2: Configuration
+3: Security and Monitoring
+
+User management
+Usability
+Security Threats
+Missing DevOps Tooling
+Telemetry
+
+RedHat OpenShift: High Availability and Security Tool For enterprises
+
+Red Hat Open Shift is completely based on the Custom Resource Definitions.
+
+Openshift project is also know as Name space in normal kubernetes Cluster
+
+Openshift Project = Namespace in kubernetes
+
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  name: linked-in-project
+  annotations:
+    openshift.io/description: "Project Description"
+
+Route =  Ingress in K8's

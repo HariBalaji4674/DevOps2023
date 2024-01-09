@@ -1,30 +1,30 @@
 Helm Documents: https://helm.sh/docs/
 Before Helm:
-      1: Static About Labels
-      2: Port numbers
-      3: Yaml Files need to create (Service,Deployment,Pods etc..)
-      4: Most of the elements are same for deployment and application
-      5: Consistency is not maintained
-      6: Revision History
-      7: Continious Deployement using ArgoCD
+    1: Static About Labels
+    2: Port numbers
+    3: Yaml Files need to create (Service,Deployment,Pods etc..)
+    4: Most of the elements are same for deployment and application
+    5: Consistency is not maintained
+    6: Revision History
+    7: Continious Deployement using ArgoCD
 After Helm:
-      1: Package Manager to install the applications using charts
-      2: Helm Works with Charts
-      3: Charts == Packages
-      4: Packages == Service,Deployment,ConfigMap yaml files
-      Helm can install
-      helm can Upgrade
-      helm can roll back
-      helm can uninstall
+    1: Package Manager to install the applications using charts
+    2: Helm Works with Charts
+    3: Charts == Packages
+    4: Packages == Service,Deployment,ConfigMap yaml files
+    Helm can install
+    helm can Upgrade
+    helm can roll back
+    helm can uninstall
 Why Helm Charts uses:
-      Package Manager where we can use charts to donwload, deploy application
-      Revision History
-      Dynamic Configuration (Can give Values at run time)
-      Helm Uses Values.yaml file where we can define values for configurations
-      Consistency
-      Intelligent Deployment
-      Life Cycle Hooks
-      Security (Charts are downloaded from repos is secured)
+    Package Manager where we can use charts to download, deploy application
+    Revision History
+    Dynamic Configuration (Can give Values at run time)
+    Helm Uses Values.yaml file where we can define values for configurations
+    Consistency
+    Intelligent Deployment
+    Life Cycle Hooks
+    Security (Charts are downloaded from repos is secured)
 
 Helm Uses Mainly:
     Repository where charts are stored
@@ -72,9 +72,9 @@ metadata:
 spec:
     containers:
     - name: {{ .Values.container.name }}
-      image: {{ .Values.container.image }}
-      ports:
-      - containerPort: {{ .Values.container.port }}
+        image: {{ .Values.container.image }}
+        ports:
+        - containerPort: {{ .Values.container.port }}
 
 values.yaml file
 ----------------
@@ -109,17 +109,17 @@ To List Down the all applications:
     helm list
 Helm Concepts: Helm Commands
 Helm Install Command:
-  helm repo list
-  helm repo add REPO-NAME REPO-URL
-  helm search repo <commands>
-  helm search repo nginx
-  helm install release-name chart-name
-  helm list
-  helm unistall <release-name>
+    helm repo list
+    helm repo add REPO-NAME REPO-URL
+    helm search repo <commands>
+    helm search repo nginx
+    helm install release-name chart-name
+    helm list
+    helm unistall <release-name>
 
 Practical Installation:
-  helm install mybitnami https://charts.bitnami.com
-  helm upgrade nginx
+    helm install mybitnami https://charts.bitnami.com
+    helm upgrade nginx
 
 In all Kubernetes and Docker we are doing only two things Building Images and Running that Images
 
@@ -143,13 +143,13 @@ Installing Helm : 3 Commands:
 Structure of Helm:
     *1: Charts : Where all Chart related content stored.
     *2: template: Whee all manifest files stored
-     3: Charts/ : If charts is depnsds on another charts it will be pulled here
-     4: valus: default values for templates (overide/default --set option)
-     5: readme.md : Gievs descriptnabout chart
+    3: Charts/ : If charts is depends on another charts it will be pulled here
+    4: values: default values for templates (override/default --set option)
+    5: readme.md : Gives describe about chart
 
 Chart.yaml: Mandatory file
 
-Charts: 3 Mandatory Fileds
+Charts: 3 Mandatory Fields
     apiVersion: To determine the rest of the fields (Structure)
     name: Name of Charts
     version: chart version
@@ -212,12 +212,14 @@ Create the values.yaml file :
 Helm Public Charts: Artifactory Hub
 
 Kubectl Commands:
+
 1: kubectl get secrets: stores all release information and get all secrets stored while Installing
 2: kubectl get events : gives all info about the containers
 3: kubectl config get-contexts : get config details for clusters
 4: kubectl config use-context docker-desktop : use default context cluster as docker desktop
 
 Helm Commands:
+
 1: helm list : List Down The Files
 2: helm uninstall <serice-name> : it will delete all the sevices
 3: helm --dry-run : for debuggging the helm Charts

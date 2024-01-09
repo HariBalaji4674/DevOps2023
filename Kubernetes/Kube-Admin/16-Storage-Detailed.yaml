@@ -1,0 +1,38 @@
+Docker Storage:
+Storage Drivers and Volume Drivers
+
+File System in Docker:
+var/lib/docker
+  aufs
+  containers
+  images
+  volumes
+
+There are two types of Volumes:
+Volume Mounting and Bind Mounting
+
+Volume Mounting where we create volumes and attach it to the pod/container
+Bind mount is where we bind the volumes from any folder from the host machine
+
+Create a Volume:
+docker volume create data_volume
+
+mounting that volume to the container:
+docker run --mount data_volume:/lib/mysql mysql
+
+Bind Mount Folder from host  to the Container:
+docker run --mount /data/mysql:/lib/mysql mysql
+
+Docker Storage Drivers:
+AUFS
+ZFS
+BTRFS
+Device Mapper
+OverLay
+OverLay2
+
+Storage Driver Plugins:
+
+Grok Filter: %{NUMBER: duration} %{IP: client}
+
+
